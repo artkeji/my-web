@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>联系我们 · MORPH 设计工作室</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 导航 -->
+<nav>
+  <a href="index.html" class="logo">MORPH<span>.</span></a>
+  <div class="menu">
+    <a href="index.html">首页</a>
+    <a href="about.html">关于</a>
+    <a href="works.html">作品</a>
+    <a href="contact.html" class="active">联系</a>
+  </div>
+  <a class="nav-cta" href="contact.html">预约咨询</a>
+</nav>
+
+<!-- 页头 -->
+<div class="page-hero">
+  <div class="blob b1"></div>
+  <div class="blob b2"></div>
+  <span class="crumb">Contact us</span>
+  <h1>联系我们</h1>
+  <p>有一个想法？一个项目？甚至只是一个模糊的方向？都欢迎来聊聊。24 小时内回复，首次咨询免费。</p>
+</div>
+
+<!-- 联系 -->
+<section>
+  <div class="contact-grid">
+    <!-- 联系方式 -->
+    <div class="contact-info">
+      <div class="c-item">
+        <div class="c-ico">📧</div>
+        <div><h4>Email</h4><p>hello@morph.design</p></div>
+      </div>
+      <div class="c-item">
+        <div class="c-ico">💬</div>
+        <div><h4>微信</h4><p>morph-design（添加请备注"网站咨询"）</p></div>
+      </div>
+      <div class="c-item">
+        <div class="c-ico">📍</div>
+        <div><h4>地址</h4><p>深圳市南山区 科技园创意大厦 8F</p></div>
+      </div>
+      <div class="c-item">
+        <div class="c-ico">🕐</div>
+        <div><h4>工作时间</h4><p>周一至周五 09:00 – 19:00（周末在线，回复稍慢）</p></div>
+      </div>
+      <div style="margin-top:22px;">
+        <h4 style="margin-bottom:10px;">项目类型参考报价</h4>
+        <p style="color:var(--muted);font-size:14.5px;">品牌全案 ¥15,000 起 · 官网设计 ¥8,000 起 · App 设计 ¥20,000 起 · 单张海报 ¥800 起</p>
+        <p style="color:var(--muted);font-size:13px;margin-top:8px;">* 最终报价取决于项目范围，欢迎来询。</p>
+      </div>
+    </div>
+
+    <!-- 表单 -->
+    <div class="form-card">
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label>你的称呼 *</label>
+            <input type="text" placeholder="怎么称呼你" required>
+          </div>
+          <div class="form-group">
+            <label>联系方式 *</label>
+            <input type="text" placeholder="电话 / 微信 / 邮箱" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>项目类型 *</label>
+          <select required>
+            <option value="">请选择</option>
+            <option>品牌全案 / VI 设计</option>
+            <option>网页 / 官网设计</option>
+            <option>App / 小程序 UI</option>
+            <option>电商 / 运营设计</option>
+            <option>插画 / 3D / IP</option>
+            <option>其他</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>预算范围</label>
+          <select>
+            <option>¥5,000 以下</option>
+            <option>¥5,000 – ¥15,000</option>
+            <option>¥15,000 – ¥50,000</option>
+            <option>¥50,000 以上</option>
+            <option>还没想好</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>项目描述 *</label>
+          <textarea placeholder="简单说说你的项目：做什么、风格偏好、期望时间……"></textarea>
+        </div>
+        <button class="btn btn-solid" type="submit" style="width:100%;">发送需求 →</button>
+        <p class="form-note">* 提交即表示同意我们通过你留下的联系方式与你联系。你的信息仅用于本次沟通，不会泄露。</p>
+      </form>
+      <p id="formOk" style="display:none;color:#00d894;margin-top:16px;font-size:15px;text-align:center;">✅ 已收到！我们会在 24 小时内联系你。</p>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta" style="margin-bottom:0;border-radius:0;border-left:none;border-right:none;">
+  <h2>想先看看我们的能力？</h2>
+  <p>去作品集逛一圈，或者直接约个 30 分钟免费电话诊断。</p>
+  <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;">
+    <a class="btn btn-solid" href="works.html">查看作品集</a>
+    <a class="btn btn-ghost" href="index.html">回到首页</a>
+  </div>
+</div>
+
+<!-- 页脚 -->
+<footer>
+  <a href="index.html" class="logo">MORPH<span>.</span> Design Studio</a>
+  <div class="flinks">
+    <a href="index.html">首页</a>
+    <a href="about.html">关于</a>
+    <a href="works.html">作品</a>
+    <a href="contact.html">联系</a>
+  </div>
+  <div>© 2026 MORPH Studio · Made with ♥</div>
+</footer>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    document.getElementById('formOk').style.display = 'block';
+    this.querySelector('button').textContent = '已提交 ✓';
+  });
+</script>
+
+</body>
+</html>

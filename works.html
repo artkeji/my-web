@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>作品集 · MORPH 设计工作室</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- 导航 -->
+<nav>
+  <a href="index.html" class="logo">MORPH<span>.</span></a>
+  <div class="menu">
+    <a href="index.html">首页</a>
+    <a href="about.html">关于</a>
+    <a href="works.html" class="active">作品</a>
+    <a href="contact.html">联系</a>
+  </div>
+  <a class="nav-cta" href="contact.html">预约咨询</a>
+</nav>
+
+<!-- 页头 -->
+<div class="page-hero">
+  <div class="blob b2"></div>
+  <div class="blob b3"></div>
+  <span class="crumb">Our works</span>
+  <h1>作品集</h1>
+  <p>精选 300+ 项目中的代表案例。点击分类筛选，看看我们在不同领域的表现。</p>
+</div>
+
+<!-- 作品列表 -->
+<section>
+  <div class="filters">
+    <button class="filter-btn active" data-filter="all">全部</button>
+    <button class="filter-btn" data-filter="brand">品牌全案</button>
+    <button class="filter-btn" data-filter="web">官网 / UI</button>
+    <button class="filter-btn" data-filter="app">App 设计</button>
+    <button class="filter-btn" data-filter="ecom">电商视觉</button>
+    <button class="filter-btn" data-filter="ip">插画 / IP</button>
+  </div>
+
+  <div class="works" id="workGrid">
+    <div class="w-card" data-cat="brand"><div class="w-thumb w-1">🌿</div><div class="w-info"><div class="cat">品牌全案</div><h3>禾风 · 有机茶饮</h3><p>VI 体系 + 包装 + 门店视觉，帮助新锐茶饮品牌完成 0 到 1 的落地。</p></div></div>
+    <div class="w-card" data-cat="web"><div class="w-thumb w-2">🚀</div><div class="w-info"><div class="cat">官网设计</div><h3>Nova 科技官网</h3><p>科技感官网 + 交互动效，上线 3 个月获客成本下降 27%。</p></div></div>
+    <div class="w-card" data-cat="ecom"><div class="w-thumb w-3">🛍️</div><div class="w-info"><div class="cat">电商视觉</div><h3>Lume 美妆旗舰店</h3><p>详情页重构 + 主图体系，转化率提升 41%，月销翻倍。</p></div></div>
+    <div class="w-card" data-cat="app"><div class="w-thumb w-4">📱</div><div class="w-info"><div class="cat">App UI</div><h3>Mood 运动社区</h3><p>从 0 到 1 的 App 全流程设计，上架首月 10w+ 下载。</p></div></div>
+    <div class="w-card" data-cat="ip"><div class="w-thumb w-5">🎮</div><div class="w-info"><div class="cat">IP 设计</div><h3>Pixel 游戏工作室</h3><p>IP 形象 + 全套运营素材，成为玩家心中的"官方记忆点"。</p></div></div>
+    <div class="w-card" data-cat="brand"><div class="w-thumb w-6">🏪</div><div class="w-info"><div class="cat">空间视觉</div><h3>Koffi 咖啡空间视觉</h3><p>空间导视 + 菜单视觉设计，让"打卡美学"为实体店引流。</p></div></div>
+    <div class="w-card" data-cat="app"><div class="w-thumb w-7">💳</div><div class="w-info"><div class="cat">金融 App</div><h3>Walle 钱包 App</h3><p>极简理财体验设计，帮助产品从 0 做到月活 50w。</p></div></div>
+    <div class="w-card" data-cat="web"><div class="w-thumb w-8">🏨</div><div class="w-info"><div class="cat">官网设计</div><h3>山屿酒店预订平台</h3><p>沉浸式场景化设计，预订转化率提升 33%。</p></div></div>
+    <div class="w-card" data-cat="ecom"><div class="w-thumb w-9">🍫</div><div class="w-info"><div class="cat">包装设计</div><h3>Kaka 巧克力礼盒</h3><p>礼品化包装升级，节日销量同比增长 2 倍。</p></div></div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta">
+  <h2>这些案例里，也有你的下一个？</h2>
+  <p>告诉我们你的项目类型，给你看看更接近的案例与方案。</p>
+  <a class="btn btn-solid" href="contact.html">聊聊你的项目 →</a>
+</div>
+
+<!-- 页脚 -->
+<footer>
+  <a href="index.html" class="logo">MORPH<span>.</span> Design Studio</a>
+  <div class="flinks">
+    <a href="index.html">首页</a>
+    <a href="about.html">关于</a>
+    <a href="works.html">作品</a>
+    <a href="contact.html">联系</a>
+  </div>
+  <div>© 2026 MORPH Studio · Made with ♥</div>
+</footer>
+
+<script>
+  const btns = document.querySelectorAll('.filter-btn');
+  const cards = document.querySelectorAll('#workGrid .w-card');
+  btns.forEach(btn => {
+    btn.addEventListener('click', () => {
+      btns.forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      const f = btn.dataset.filter;
+      cards.forEach(card => {
+        card.style.display = (f === 'all' || card.dataset.cat === f) ? '' : 'none';
+      });
+    });
+  });
+</script>
+
+</body>
+</html>
